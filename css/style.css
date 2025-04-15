@@ -1,6 +1,12 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+
+:root{
+    --azul-principal: oklch(20.8% 0.042 265.755);
+    --laranja: #F95F00;
+}
+
 body {
     color: #797979;
     background: #ffffff;
@@ -24,7 +30,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-    color: #EF233C;
+    color: var(--laranja);
     outline: none;
     text-decoration: none;
 }
@@ -44,20 +50,20 @@ a:focus {
     font-weight: 600;
     letter-spacing: 1px;
     color: #ffffff;
-    background: #EF233C;
+    background: var(--laranja);
     border: 2px solid transparent;
     border-radius: 0;
-    box-shadow: inset 0 0 0 50px #EF233C;
+    box-shadow: inset 0 0 0 50px var(--laranja);
     transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
 }
 
 .btn:hover {
-    color: #EF233C;
+    color: var(--laranja);
     background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
+    box-shadow: inset 0 0 0 0 var(--laranja);
+    border-color: var(--laranja);
 }
 
 #loader {
@@ -158,7 +164,9 @@ a:focus {
 
 .navbar .navbar-brand img {
     max-width: 100%;
-    max-height: 40px;
+    max-height: 60px;
+    border-radius:100%;
+    object-fit: cover;
 }
 
 .navbar .dropdown-menu {
@@ -173,7 +181,7 @@ a:focus {
     .navbar {
         position: absolute;
         width: 100%;
-        padding: 30px 60px;
+        padding: 8px 60px;
         background: transparent !important;
         border-bottom: 1px dashed rgba(256, 256, 256, .2);
         z-index: 9;
@@ -181,7 +189,7 @@ a:focus {
     
     .navbar.nav-sticky {
         padding: 10px 60px;
-        background: #ffffff !important;
+        background: var(--azul-principal) !important;
     }
     
     .navbar .navbar-brand {
@@ -202,12 +210,12 @@ a:focus {
     
     .navbar-light.nav-sticky .navbar-nav .nav-link,
     .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
-        color: #414141;
+        color: #ffff;
     }
 
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link.active {
-        color: #111111;
+        color: #F95F00;
     }
     
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
@@ -249,7 +257,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 120px 0 0 0;
     overflow: hidden;
-    background: linear-gradient(rgba(239, 35, 60, .95), rgba(239, 35, 60, .95)), url(../img/hero-bg.jpg);
+    background: var(--azul-principal);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -273,8 +281,9 @@ a:focus {
 .hero .hero-content {
     position: relative;
     padding-left: 75px;
+    padding-bottom:75px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
@@ -287,11 +296,11 @@ a:focus {
 }
 
 .hero .hero-text h1 {
-    color: #ffffff;
-    font-size: 60px;
+    color: var(--laranja);
+    font-size: 40px;
     font-weight: 700;
     letter-spacing: 3px;
-    margin-bottom: 15px;        <!-- CSS Libraries -->
+    margin-bottom: 15px;       
 }
 
 .hero .hero-text h2 {
@@ -315,9 +324,10 @@ a:focus {
 
 .hero .hero-btn .btn {
     margin-top: 35px;
-    color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
+    color: #ffff;
+    background: var(--laranja);
+    border-radius:4px;
+    font-size: 18px;
 }
 
 .hero .hero-btn .btn:hover {
@@ -440,7 +450,7 @@ a:focus {
     top: 11px;
     right: 0;
     left: -30px;
-    background: #EF233C;
+    background: var(--laranja);
     z-index: -1;
 }
 
@@ -453,6 +463,11 @@ a:focus {
     left: 3px;
     background: #EF233C;
     z-index: 1;
+}
+
+.bold{
+    font-weight: bold;
+    color: var(--laranja);
 }
 
 .section-header h2 {
@@ -504,6 +519,17 @@ a:focus {
 
 .about .about-text p {
     font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte limpa e moderna */
+    font-size: 1.1rem; /* Tamanho confortável para leitura */
+    line-height: 1.6; /* Espaçamento entre linhas para facilitar a leitura */
+    color: #333; /* Cor escura, mas não 100% preta (mais suave) */
+    max-width: 700px; /* Largura máxima para limitar linhas muito longas */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+
+
+
 }
 
 .about .skills {
@@ -1466,7 +1492,7 @@ a:focus {
 .footer {
     position: relative;
     margin-top: 45px;
-    background: #EF233C;
+    background: var(--azul-principal);
 }
 
 .footer .container-fluid {
@@ -1590,3 +1616,139 @@ a:focus {
         padding: 0 5px;
     }
 }
+
+.faq-accordion {
+    width: 100%;
+    padding: 1rem;
+}
+
+.faq-item {
+    background-color: oklch(20.8% 0.042 265.755);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background-color: oklch(20.8% 0.042 265.755);
+    transition: max-height 0.3s ease;
+    padding: 0 1rem;
+    color: white;
+}
+
+.faq-item.open .faq-answer {
+    max-height: 200px;
+    padding-bottom: 1rem;
+}
+
+.testimonial-card {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonial-content {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 350px;
+    width: 100%;
+    position: relative;
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-video {
+    display: none; /* futuramente pode ser ativado */
+    margin-top: 1rem;
+}
+
+#bonus {
+    background-color: oklch(20.8% 0.042 265.755);
+    padding: 60px 0;
+    color: #ffffff;
+}
+
+#bonus .section-header h2,
+#bonus .section-header p {
+    color: #ffffff;
+}
+
+.bonus-box {
+    background-color: transparent;
+    border: 1px solid #F95F00;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bonus-box:hover {
+    background-color: #F95F00;
+    transform: translateY(-5px);
+}
+
+.bonus-box .bonus-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+.bonus-box h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+.bonus-box h4 span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.bonus-box:hover h4,
+.bonus-box:hover h4 span {
+    color: #ffffff;
+}
+
