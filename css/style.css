@@ -2,7 +2,7 @@
 /********* General CSS *********/
 /*******************************/
 
-:root{
+:root {
     --azul-principal: oklch(20.8% 0.042 265.755);
     --laranja: #F95F00;
 }
@@ -14,10 +14,10 @@ body {
 }
 
 h1,
-h2, 
-h3, 
+h2,
+h3,
 h4,
-h5, 
+h5,
 h6 {
     color: #414141;
 }
@@ -104,13 +104,23 @@ a:focus {
 }
 
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .back-to-top {
@@ -159,13 +169,13 @@ a:focus {
     font-weight: 700;
     letter-spacing: 2px;
     transition: .5s;
-    
+
 }
 
 .navbar .navbar-brand img {
     max-width: 100%;
     max-height: 60px;
-    border-radius:100%;
+    border-radius: 100%;
     object-fit: cover;
 }
 
@@ -186,16 +196,16 @@ a:focus {
         border-bottom: 1px dashed rgba(256, 256, 256, .2);
         z-index: 9;
     }
-    
+
     .navbar.nav-sticky {
         padding: 10px 60px;
         background: var(--azul-principal) !important;
     }
-    
+
     .navbar .navbar-brand {
         color: #ffffff;
     }
-    
+
     .navbar.nav-sticky .navbar-brand {
         color: #EF233C;
     }
@@ -207,7 +217,7 @@ a:focus {
         font-size: 15px;
         font-weight: 500;
     }
-    
+
     .navbar-light.nav-sticky .navbar-nav .nav-link,
     .navbar-light.nav-sticky .navbar-nav .nav-link:focus {
         color: #ffff;
@@ -217,31 +227,31 @@ a:focus {
     .navbar-light .navbar-nav .nav-link.active {
         color: #F95F00;
     }
-    
+
     .navbar-light.nav-sticky .navbar-nav .nav-link:hover,
     .navbar-light.nav-sticky .navbar-nav .nav-link.active {
         color: #EF233C;
     }
 }
 
-@media (max-width: 991.98px) {   
+@media (max-width: 991.98px) {
     .navbar {
         padding: 15px;
         background: #ffffff !important;
     }
-    
+
     .navbar .navbar-brand {
         color: #EF233C;
     }
-    
+
     .navbar .navbar-nav {
         margin-top: 15px;
     }
-    
+
     .navbar a.nav-link {
         padding: 5px;
     }
-    
+
     .navbar .dropdown-menu {
         box-shadow: none;
     }
@@ -281,7 +291,7 @@ a:focus {
 .hero .hero-content {
     position: relative;
     padding-left: 75px;
-    padding-bottom:75px;
+    padding-bottom: 75px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,7 +310,7 @@ a:focus {
     font-size: 40px;
     font-weight: 700;
     letter-spacing: 3px;
-    margin-bottom: 15px;       
+    margin-bottom: 15px;
 }
 
 .hero .hero-text h2 {
@@ -326,7 +336,7 @@ a:focus {
     margin-top: 35px;
     color: #ffff;
     background: var(--laranja);
-    border-radius:4px;
+    border-radius: 4px;
     font-size: 18px;
 }
 
@@ -345,24 +355,24 @@ a:focus {
     .hero {
         padding-top: 60px;
     }
-    
+
     .hero .hero-content {
         padding: 0 15px;
     }
-    
+
     .hero .hero-text p {
         font-size: 20px;
     }
-    
+
     .hero .hero-text h1 {
         font-size: 45px;
     }
-    
+
     .hero .hero-text h2 {
         font-size: 25px;
         height: 25px;
     }
-    
+
     .hero .hero-btn .btn {
         padding: 12px 30px;
         letter-spacing: 1px;
@@ -374,27 +384,27 @@ a:focus {
         padding-top: 60px;
         padding-bottom: 60px;
     }
-    
+
     .hero,
     .hero .hero-text,
     .hero .hero-btn {
         width: 100%;
         text-align: center;
     }
-    
+
     .hero .hero-text p {
         font-size: 18px;
     }
-    
+
     .hero .hero-text h1 {
         font-size: 35px;
     }
-    
+
     .hero .hero-text h2 {
         font-size: 22px;
         height: 22px;
     }
-    
+
     .hero .hero-btn .btn {
         padding: 10px 15px;
         letter-spacing: 1px;
@@ -405,16 +415,16 @@ a:focus {
     .hero .hero-text p {
         font-size: 16px;
     }
-    
+
     .hero .hero-text h1 {
         font-size: 30px;
     }
-    
+
     .hero .hero-text h2 {
         font-size: 18px;
         height: 18px;
     }
-    
+
     .hero .hero-btn .btn {
         padding: 8px 10px;
         letter-spacing: 0;
@@ -465,7 +475,7 @@ a:focus {
     z-index: 1;
 }
 
-.bold{
+.bold {
     font-weight: bold;
     color: var(--laranja);
 }
@@ -519,14 +529,22 @@ a:focus {
 
 .about .about-text p {
     font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte limpa e moderna */
-    font-size: 1.1rem; /* Tamanho confortável para leitura */
-    line-height: 1.6; /* Espaçamento entre linhas para facilitar a leitura */
-    color: #333; /* Cor escura, mas não 100% preta (mais suave) */
-    max-width: 700px; /* Largura máxima para limitar linhas muito longas */
-    margin: 0 auto; /* Centraliza horizontalmente */
-    padding: 1rem; /* Espaçamento interno */
-    border-radius: 8px; /* Cantos arredondados */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fonte limpa e moderna */
+    font-size: 1.1rem;
+    /* Tamanho confortável para leitura */
+    line-height: 1.6;
+    /* Espaçamento entre linhas para facilitar a leitura */
+    color: #333;
+    /* Cor escura, mas não 100% preta (mais suave) */
+    max-width: 700px;
+    /* Largura máxima para limitar linhas muito longas */
+    margin: 0 auto;
+    /* Centraliza horizontalmente */
+    padding: 1rem;
+    /* Espaçamento interno */
+    border-radius: 8px;
+    /* Cantos arredondados */
 
 
 
@@ -634,20 +652,20 @@ a:focus {
 }
 
 .experience .timeline .timeline-item::before {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 0;
-  top: 46px;
-  right: 10px;
-  z-index: 1;
-  border: 10px solid;
-  border-color: transparent transparent transparent #dddddd;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 46px;
+    right: 10px;
+    z-index: 1;
+    border: 10px solid;
+    border-color: transparent transparent transparent #dddddd;
 }
 
 .experience .timeline .timeline-item.right::before {
-  left: 10px;
-  border-color: transparent #dddddd transparent transparent;
+    left: 10px;
+    border-color: transparent #dddddd transparent transparent;
 }
 
 .experience .timeline .timeline-date {
@@ -712,27 +730,27 @@ a:focus {
         width: 100%;
         padding-left: 38px;
     }
-    
+
     .experience .timeline .timeline-item.left {
         padding-right: 0;
     }
-    
+
     .experience .timeline .timeline-item.right {
         left: 0%;
         padding-left: 38px;
     }
 
-    .experience .timeline .timeline-item.left::after, 
+    .experience .timeline .timeline-item.left::after,
     .experience .timeline .timeline-item.right::after {
         left: 0;
     }
-    
+
     .experience .timeline .timeline-item.left::before,
     .experience .timeline .timeline-item.right::before {
         left: 18px;
         border-color: transparent #dddddd transparent transparent;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-date,
     .experience .timeline .timeline-item.right .timeline-date {
         position: relative;
@@ -742,7 +760,7 @@ a:focus {
         text-align: left;
         margin-bottom: 10px;
     }
-    
+
     .experience .timeline .timeline-item.left .timeline-text,
     .experience .timeline .timeline-item.right .timeline-text {
         border-right: none;
@@ -824,7 +842,7 @@ a:focus {
         font-size: 16px;
         margin-bottom: 5px;
     }
-    
+
     .service .service-text p {
         font-size: 14px;
     }
@@ -888,8 +906,8 @@ a:focus {
 
 .portfolio .portfolio-img img {
     position: relative;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transform: scale(1.1);
     transition: .5s;
@@ -1218,7 +1236,7 @@ a:focus {
     .team .team-text {
         padding: 0 15px;
     }
-    
+
     .team .team-text h2 {
         font-size: 16px;
         margin-bottom: 0;
@@ -1403,7 +1421,7 @@ a:focus {
     .contact .container-fluid {
         background: none;
     }
-    
+
     .contact .contact-form {
         padding: 90px 0;
     }
@@ -1638,7 +1656,7 @@ a:focus {
     padding: 1rem;
     font-size: 1rem;
     color: white;
-    font-weight: bold;
+    font-weight: normal;
     cursor: pointer;
 }
 
@@ -1695,7 +1713,8 @@ a:focus {
 }
 
 .testimonial-video {
-    display: none; /* futuramente pode ser ativado */
+    display: none;
+    /* futuramente pode ser ativado */
     margin-top: 1rem;
 }
 
@@ -1752,3 +1771,148 @@ a:focus {
     color: #ffffff;
 }
 
+.card-mentoria {
+    border-radius: 1rem;
+    border: 1px solid var(--azul-principal) !important;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.card-mentoria:hover {
+    transform: translateY(-5px);
+}
+
+.card-mentoria .card-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--azul-principal);
+}
+
+.card-mentoria .card-text {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+/* Estilo para a lista não ordenada (pontos) */
+.lista-pilares {
+    list-style: disc;
+    padding-left: 1.2rem;
+}
+
+.lista-pilares li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 0.8rem;
+    color: #555;
+}
+
+.lista-pilares li::marker {
+    color: var(--azul-principal);
+    font-size: 1.2em;
+}
+
+/* Estilo para a lista ordenada (números) */
+.lista-acompanhamento {
+    counter-reset: item;
+    padding-left: 1.4rem;
+    list-style: none;
+}
+
+.lista-acompanhamento li {
+    counter-increment: item;
+    margin-bottom: 0.75rem;
+    position: relative;
+    padding-left: 1.8rem;
+    color: #555;
+}
+
+.lista-acompanhamento li::before {
+    content: counter(item) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+    color: var(--azul-principal);
+}
+
+
+.testimonial-carousel {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+}
+
+.testimonial-carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+.testimonial-carousel:active {
+    cursor: grabbing;
+}
+
+.testimonial-track {
+    display: inline-flex;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.testimonial-card {
+    flex: 0 0 auto;
+    width: 280px;
+    scroll-snap-align: start;
+    border: 1px solid var(--azul-principal);
+    border-radius: 1rem;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-img-full {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+  }
+  
+  .modal-content {
+    display: block;
+    margin: auto;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .close-modal:hover {
+    color: #ccc;
+  }
+  
