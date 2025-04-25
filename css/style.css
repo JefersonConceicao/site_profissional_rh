@@ -1675,6 +1675,7 @@ a:focus {
 }
 
 .testimonial-card {
+    width: 100%;
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
@@ -1862,7 +1863,7 @@ a:focus {
 
 .testimonial-card {
     flex: 0 0 auto;
-    width: 280px;
+    width: 100%;
     scroll-snap-align: start;
     border: 1px solid var(--azul-principal);
     border-radius: 1rem;
@@ -1870,6 +1871,12 @@ a:focus {
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
+}
+
+@media (min-width: 768px) {
+    .testimonial-card {
+        width: 60%;
+    }
 }
 
 .testimonial-img-full {
